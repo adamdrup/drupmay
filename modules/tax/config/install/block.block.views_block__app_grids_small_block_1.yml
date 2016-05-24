@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.app_grids_small
+  module:
+    - system
+    - views
+  theme:
+    - zircon
+id: views_block__app_grids_small_block_1
+theme: zircon
+region: featured
+weight: -16
+provider: null
+plugin: 'views_block:app_grids_small-block_1'
+settings:
+  id: 'views_block:app_grids_small-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/meteo\r\n/industry\r\n/waste\r\n"
+    negate: false
+    context_mapping: {  }

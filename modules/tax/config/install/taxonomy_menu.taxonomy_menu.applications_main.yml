@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.application
+id: applications_main
+label: Applications
+vocabulary: application
+menu: main

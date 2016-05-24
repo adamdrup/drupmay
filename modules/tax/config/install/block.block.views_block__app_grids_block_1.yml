@@ -1,0 +1,29 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.app_grids
+  module:
+    - system
+    - views
+  theme:
+    - zircon
+id: views_block__app_grids_block_1
+theme: zircon
+region: '-1'
+weight: -17
+provider: null
+plugin: 'views_block:app_grids-block_1'
+settings:
+  id: 'views_block:app_grids-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /applications
+    negate: false
+    context_mapping: {  }

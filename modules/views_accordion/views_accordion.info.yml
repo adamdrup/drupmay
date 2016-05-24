@@ -1,0 +1,12 @@
+name: Views Accordion
+type: module
+description: 'Provides an accordion views display plugin.'
+# core: 8.x
+dependencies:
+  - views
+
+# Information added by Drupal.org packaging script on 2016-03-20
+version: '8.x-1.0-alpha2'
+core: '8.x'
+project: 'views_accordion'
+datestamp: 1458495843

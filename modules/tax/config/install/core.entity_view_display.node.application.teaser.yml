@@ -1,0 +1,112 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application.field_applications
+    - field.field.node.application.field_description
+    - field.field.node.application.field_documentation
+    - field.field.node.application.field_download
+    - field.field.node.application.field_image_fiedler
+    - field.field.node.application.field_related_applications
+    - field.field.node.application.field_related_products
+    - field.field.node.application.field_teaser
+    - image.style.medium
+    - node.type.application
+  module:
+    - ds
+    - file
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-3-9
+      path: modules/bootstrap_layouts/templates/two-columns/bootstrap-3-9
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      sidebar_right:
+        - node_title
+        - field_teaser
+        - links
+      sidebar_left:
+        - field_image_fiedler
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.application.teaser
+targetEntityType: node
+bundle: application
+mode: teaser
+content:
+  field_applications:
+    type: entity_reference_label
+    weight: 11
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_description:
+    type: text_default
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_documentation:
+    type: file_rss_enclosure
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_download:
+    type: file_rss_enclosure
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_image_fiedler:
+    type: image
+    weight: 3
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_related_applications:
+    type: entity_reference_label
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_products:
+    type: entity_reference_label
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_teaser:
+    type: text_default
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

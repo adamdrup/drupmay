@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.productstools
+  module:
+    - system
+  theme:
+    - bootstrap
+id: products
+theme: bootstrap
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'system_menu_block:productstools'
+settings:
+  id: 'system_menu_block:productstools'
+  label: Products
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

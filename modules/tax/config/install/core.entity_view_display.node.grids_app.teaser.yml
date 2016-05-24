@@ -1,0 +1,96 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.grids_app.body
+    - field.field.node.grids_app.field_applications
+    - field.field.node.grids_app.field_assem
+    - field.field.node.grids_app.field_en_partners
+    - field.field.node.grids_app.field_gallery
+    - field.field.node.grids_app.field_group
+    - field.field.node.grids_app.field_image_fiedler
+    - field.field.node.grids_app.field_link
+    - field.field.node.grids_app.field_link_name
+    - field.field.node.grids_app.field_partners
+    - field.field.node.grids_app.field_products
+    - field.field.node.grids_app.field_rank
+    - image.style.mid
+    - node.type.grids_app
+  module:
+    - ds
+    - image
+    - link
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-3-9
+      path: modules/bootstrap_layouts/templates/two-columns/bootstrap-3-9
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      sidebar_right:
+        - body
+      sidebar_left:
+        - field_image_fiedler
+id: node.grids_app.teaser
+targetEntityType: node
+bundle: grids_app
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_image_fiedler:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: mid
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_link:
+    type: link_separate
+    weight: 11
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+  field_link_name:
+    type: link
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+  links:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_applications: true
+  field_assem: true
+  field_en_partners: true
+  field_gallery: true
+  field_group: true
+  field_partners: true
+  field_products: true
+  field_rank: true
+  langcode: true

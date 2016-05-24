@@ -1,0 +1,561 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.grids_app
+    - node.type.slideshow
+    - system.menu.main
+    - taxonomy.vocabulary.products
+    - views.view.water_conductivity
+    - views.view.water_flow
+    - views.view.water_ion
+    - views.view.water_level
+    - views.view.water_meter
+    - views.view.water_oygen
+    - views.view.water_ph
+    - views.view.water_redox
+    - views.view.water_temperature
+    - views.view.water_turbidity
+  content:
+    - 'taxonomy_term:products:01b8297b-9779-41f4-be00-aed45bb7e72a'
+    - 'taxonomy_term:products:01b84b22-6aa4-4a02-9608-8c35808b4fb6'
+    - 'taxonomy_term:products:024613f5-682c-40d2-8a4f-79786fc9a419'
+    - 'taxonomy_term:products:0a0a257a-ce85-48a5-a500-e05e65862352'
+    - 'taxonomy_term:products:10e7ba44-c204-4761-8604-4c0bae2658e0'
+    - 'taxonomy_term:products:12385716-5102-4c0c-801e-30eca839051e'
+    - 'taxonomy_term:products:14e1b4f6-3f7c-4275-b85c-9259bd0535b0'
+    - 'taxonomy_term:products:1ed47986-11ff-4c3d-825f-95262e9f08f7'
+    - 'taxonomy_term:products:20fa3103-15ab-41f2-8245-692f1888bb39'
+    - 'taxonomy_term:products:2ef3514b-024e-4b3c-840f-1504c68eb686'
+    - 'taxonomy_term:products:43fae7ba-c887-4515-b202-2e5d5d1b6b33'
+    - 'taxonomy_term:products:44a0e565-523a-4a6e-a203-3f6f4a89076a'
+    - 'taxonomy_term:products:45954514-ffbf-4c6e-9753-838a10d5c618'
+    - 'taxonomy_term:products:477fa767-b8a8-409d-8500-aac773683e65'
+    - 'taxonomy_term:products:4c6e9c7a-e069-43d8-8103-3dec1ec912f8'
+    - 'taxonomy_term:products:4dab9312-7a28-41ba-a200-ed0035b92e5b'
+    - 'taxonomy_term:products:56296827-67d8-4d95-a309-9d87ba30f432'
+    - 'taxonomy_term:products:5b2bc252-cb3c-4b4f-8f07-7bce663d7072'
+    - 'taxonomy_term:products:63f4edd4-d7e9-47b5-9e00-db3d6e2406b6'
+    - 'taxonomy_term:products:6c159187-c714-4dc1-992a-4270925ce6cb'
+    - 'taxonomy_term:products:6c24323e-7dad-46fa-ae00-dc1a139380f6'
+    - 'taxonomy_term:products:6c9c4259-012b-4781-8e00-ffa94dc78a60'
+    - 'taxonomy_term:products:6ca97720-8b96-42f0-9e01-1de3f1e89d89'
+    - 'taxonomy_term:products:872c05f7-42da-47ae-8c06-6ea6822ca82a'
+    - 'taxonomy_term:products:877cd17c-f240-4e5c-8000-d4f9e0114654'
+    - 'taxonomy_term:products:87dbab4b-0b60-428e-b300-c0440e2ba9b1'
+    - 'taxonomy_term:products:922a1053-4409-4a1c-be00-bf04315d8929'
+    - 'taxonomy_term:products:9242b66d-d9cb-469f-b800-a8949ee691a7'
+    - 'taxonomy_term:products:93118786-28f7-4ea9-9733-511bb705b69b'
+    - 'taxonomy_term:products:99f99c09-0e44-4338-b900-cf60d36fb2d8'
+    - 'taxonomy_term:products:9c604593-ab58-425c-9505-5f75fe664b10'
+    - 'taxonomy_term:products:9e6cdfc7-eef6-4634-9904-4b57e3624613'
+    - 'taxonomy_term:products:a31563e9-9de8-4557-a00e-14802537f57b'
+    - 'taxonomy_term:products:a383ae01-7580-4223-bf11-175d290e3841'
+    - 'taxonomy_term:products:ad443e0f-fe20-4be9-8717-2314ececfbcc'
+    - 'taxonomy_term:products:b026947d-9071-428b-8d00-a11c08d11fce'
+    - 'taxonomy_term:products:b2d54ddc-b0dc-4f3b-bf15-21eb3f4df20a'
+    - 'taxonomy_term:products:b5d1c604-b7fd-4b45-a810-16b57b9d507d'
+    - 'taxonomy_term:products:b9730ef4-055f-4018-ab00-d82b935e588c'
+    - 'taxonomy_term:products:bf5d6c83-af5b-4480-8326-38e22a902c1a'
+    - 'taxonomy_term:products:c0f9fd2e-b640-469b-b800-da679e0c2d0f'
+    - 'taxonomy_term:products:c271d20b-a9ac-4db3-9b00-a1afb2f32840'
+    - 'taxonomy_term:products:c2e8a70d-5848-4d4c-a20c-12ccc25b6953'
+    - 'taxonomy_term:products:c47547f3-5773-41aa-9000-d6e52ea2a10c'
+    - 'taxonomy_term:products:c7d05b41-a277-481e-9007-7af598b6ca3d'
+    - 'taxonomy_term:products:c83f73c3-e622-4e73-bf24-3616893c8184'
+    - 'taxonomy_term:products:d07bd42e-17b9-4bba-8a00-c8f6b310558a'
+    - 'taxonomy_term:products:d186d015-bad1-4846-8c23-351fb0765518'
+    - 'taxonomy_term:products:d3213838-b515-483d-8e00-c6ebabe91248'
+    - 'taxonomy_term:products:d8bc679f-c12e-4b45-a904-4f1897b84fd0'
+    - 'taxonomy_term:products:e3b2878d-3fd4-46f4-8600-d6a38ec15ceb'
+    - 'taxonomy_term:products:e9a0dd8f-5b54-40de-8000-d7620a7d83d8'
+    - 'taxonomy_term:products:ea666418-b37e-4506-9112-18d578883b31'
+    - 'taxonomy_term:products:ee3eaddc-5b46-4f64-b900-c1646f8fba2a'
+    - 'taxonomy_term:products:f68cbe0a-704b-4fbf-8b00-d2f999316cc8'
+    - 'taxonomy_term:products:fb6da490-6155-43d2-8a00-00046b56e5e7'
+  module:
+    - better_exposed_filters
+    - node
+    - taxonomy
+    - user
+id: water
+label: Water
+module: views
+description: ''
+tag: ''
+base_table: node_field_data
+base_field: nid
+core: 8.x
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: 0
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: 1
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          bef:
+            general:
+              allow_secondary: 0
+              secondary_label: 'Advanced options'
+            tid_1:
+              bef_format: bef
+              more_options:
+                bef_select_all_none: 1
+                bef_collapsible: 1
+                is_secondary: 0
+                rewrite:
+                  filter_rewrite_values: ''
+      pager:
+        type: full
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          quantity: 9
+      style:
+        type: default
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: true
+          plugin_id: field
+          relationship: none
+          group_type: group
+          admin_label: ''
+          exclude: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            42: 42
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: products
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        tid_1:
+          id: tid_1
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: not
+          value:
+            50: 50
+            30: 30
+            24: 24
+            18: 18
+            36: 36
+            59: 59
+            58: 58
+            60: 60
+            61: 61
+            62: 62
+            63: 63
+            41: 41
+            45: 45
+            10: 10
+            42: 42
+            7: 7
+            29: 29
+            39: 39
+            23: 23
+            40: 40
+            51: 51
+            17: 17
+            6: 6
+            11: 11
+            43: 43
+            46: 46
+            44: 44
+            48: 48
+            16: 16
+            13: 13
+            37: 37
+            25: 25
+            52: 52
+            47: 47
+            21: 21
+            12: 12
+            53: 53
+            38: 38
+            26: 26
+            49: 49
+            20: 20
+            54: 54
+            19: 19
+            8: 8
+            28: 28
+            22: 22
+            15: 15
+            27: 27
+            55: 55
+            5: 5
+            4: 4
+            56: 56
+            57: 57
+            2: 2
+            1: 1
+            3: 3
+          group: 1
+          exposed: false
+          expose:
+            operator_id: tid_1_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: tid_1_op
+            identifier: tid_1
+            required: true
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: products
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not in'
+          value:
+            grids_app: grids_app
+            slideshow: slideshow
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+      sorts: {  }
+      title: Water
+      header:
+        view:
+          id: view
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_level:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_5:
+          id: view_5
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_flow:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_1:
+          id: view_1
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_meter:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_2:
+          id: view_2
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_temperature:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_6:
+          id: view_6
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_turbidity:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_3:
+          id: view_3
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_oygen:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_4:
+          id: view_4
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_redox:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_7:
+          id: view_7
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_conductivity:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_8:
+          id: view_8
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_ph:block_1'
+          inherit_arguments: false
+          plugin_id: view
+        view_9:
+          id: view_9
+          table: views
+          field: view
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          view_to_insert: 'water_ion:block_1'
+          inherit_arguments: false
+          plugin_id: view
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: water
+      menu:
+        type: normal
+        title: Water
+        description: ''
+        expanded: false
+        parent: 'taxonomy_menu.menu_link:taxonomy_menu.menu_link.products_main.42'
+        weight: 0
+        context: '0'
+        menu_name: main
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }

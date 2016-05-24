@@ -1,0 +1,23 @@
+name: tax
+type: module
+core: 8.x
+dependencies:
+  - better_exposed_filters
+  - block
+  - colorbox
+  - ds
+  - field
+  - field_group
+  - file
+  - image
+  - link
+  - node
+  - options
+  - path
+  - responsive_image
+  - system
+  - taxonomy
+  - taxonomy_menu
+  - text
+  - user
+  - views

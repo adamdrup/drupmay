@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.prod_grid
+  module:
+    - system
+    - views
+  theme:
+    - zircon
+id: views_block__prod_grid_block_1
+theme: zircon
+region: featured
+weight: -12
+provider: null
+plugin: 'views_block:prod_grid-block_1'
+settings:
+  id: 'views_block:prod_grid-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/products\r\n"
+    negate: false
+    context_mapping: {  }

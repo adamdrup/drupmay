@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.productstools
+    - taxonomy.vocabulary.products
+id: products_tools
+label: 'Products tools'
+vocabulary: products
+menu: productstools

@@ -1,0 +1,211 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.station.field_applications
+    - field.field.node.station.field_asse
+    - field.field.node.station.field_block_attempt
+    - field.field.node.station.field_degree_of_protection
+    - field.field.node.station.field_description
+    - field.field.node.station.field_display
+    - field.field.node.station.field_documentation
+    - field.field.node.station.field_download
+    - field.field.node.station.field_flow_meter
+    - field.field.node.station.field_image_fiedler
+    - field.field.node.station.field_modbus
+    - field.field.node.station.field_overview
+    - field.field.node.station.field_products
+    - field.field.node.station.field_rank
+    - field.field.node.station.field_related_accessories
+    - field.field.node.station.field_related_applications
+    - field.field.node.station.field_related_assemblies
+    - field.field.node.station.field_related_products
+    - field.field.node.station.field_similar_products
+    - field.field.node.station.field_specification
+    - field.field.node.station.field_teaser
+    - image.style.medium
+    - node.type.station
+  module:
+    - ds
+    - file
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-3-9
+      path: modules/bootstrap_layouts/templates/two-columns/bootstrap-3-9
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      sidebar_right:
+        - node_title
+        - field_teaser
+        - links
+      sidebar_left:
+        - field_image_fiedler
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.station.teaser
+targetEntityType: node
+bundle: station
+mode: teaser
+content:
+  field_applications:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_asse:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_block_attempt:
+    type: entity_reference_label
+    weight: 23
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_degree_of_protection:
+    type: list_default
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_default
+    weight: 22
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_display:
+    type: list_default
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_documentation:
+    type: file_rss_enclosure
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_download:
+    type: file_rss_enclosure
+    weight: 24
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_flow_meter:
+    type: boolean
+    weight: 15
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_image_fiedler:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_modbus:
+    type: boolean
+    weight: 13
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  field_overview:
+    type: text_default
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_products:
+    type: entity_reference_label
+    weight: 20
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_accessories:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_applications:
+    type: entity_reference_label
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_assemblies:
+    type: entity_reference_label
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_products:
+    type: entity_reference_label
+    weight: 19
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_similar_products:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_specification:
+    type: text_default
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser:
+    type: text_default
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_rank: true
+  langcode: true

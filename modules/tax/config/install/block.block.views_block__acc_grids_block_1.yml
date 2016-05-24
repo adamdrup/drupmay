@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.acc_grids
+  module:
+    - system
+    - views
+  theme:
+    - zircon
+id: views_block__acc_grids_block_1
+theme: zircon
+region: featured
+weight: -17
+provider: null
+plugin: 'views_block:acc_grids-block_1'
+settings:
+  id: 'views_block:acc_grids-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /accessories
+    negate: false
+    context_mapping: {  }

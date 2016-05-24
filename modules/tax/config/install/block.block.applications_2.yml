@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.applications
+  module:
+    - system
+  theme:
+    - bootstrap
+id: applications_2
+theme: bootstrap
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'system_menu_block:applications'
+settings:
+  id: 'system_menu_block:applications'
+  label: Applications
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: mid
+label: Mid360
+effects:
+  fb8c5a54-c283-4efb-aa00-e76f6f9f3239:
+    uuid: fb8c5a54-c283-4efb-aa00-e76f6f9f3239
+    id: image_scale
+    weight: 1
+    data:
+      width: 360
+      height: 360
+      upscale: true

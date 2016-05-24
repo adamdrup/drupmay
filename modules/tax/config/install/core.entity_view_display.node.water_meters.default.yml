@@ -1,0 +1,338 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.water_meters.field_applications
+    - field.field.node.water_meters.field_asse
+    - field.field.node.water_meters.field_description
+    - field.field.node.water_meters.field_documentation
+    - field.field.node.water_meters.field_download
+    - field.field.node.water_meters.field_image_fiedler
+    - field.field.node.water_meters.field_nominal_flow_rate
+    - field.field.node.water_meters.field_overview
+    - field.field.node.water_meters.field_products
+    - field.field.node.water_meters.field_rank
+    - field.field.node.water_meters.field_related_accessories
+    - field.field.node.water_meters.field_related_applications
+    - field.field.node.water_meters.field_related_assemblies
+    - field.field.node.water_meters.field_related_products
+    - field.field.node.water_meters.field_similar_products
+    - field.field.node.water_meters.field_specification
+    - field.field.node.water_meters.field_teaser
+    - field.field.node.water_meters.field_type
+    - image.style.medium
+    - node.type.water_meters
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-6-6-bricks
+      path: modules/bootstrap_layouts/templates/bricks/bootstrap-6-6-bricks
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      top:
+        - links
+      upper_left:
+        - field_overview
+      upper_right:
+        - field_image_fiedler
+      middle:
+        - field_specification
+        - group_tabs
+        - field_description
+        - field_documentation
+        - field_download
+        - field_products
+        - field_related_products
+        - field_asse
+        - field_applications
+        - field_related_assemblies
+        - field_type
+        - field_related_applications
+        - field_nominal_flow_rate
+        - field_related_accessories
+        - group_description
+        - group_specification
+        - group_parameters
+        - group_documents
+        - group_related
+        - group_similar
+        - group_re
+        - field_similar_products
+        - group_acc
+        - group_class
+  field_group:
+    group_documents:
+      children:
+        - field_documentation
+        - field_download
+      parent_name: group_tabs
+      weight: 27
+      label: Documents
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_description:
+      children:
+        - field_description
+      parent_name: group_tabs
+      weight: 24
+      label: Description
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_parameters:
+      children:
+        - field_type
+        - field_nominal_flow_rate
+      parent_name: group_tabs
+      weight: 26
+      label: Parameters
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_tabs:
+      children:
+        - group_description
+        - group_specification
+        - group_parameters
+        - group_documents
+        - group_related
+        - group_similar
+        - group_re
+        - group_acc
+        - group_class
+      parent_name: ''
+      weight: 3
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_specification:
+      children:
+        - field_specification
+      parent_name: group_tabs
+      weight: 25
+      label: Specification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_related:
+      children:
+        - field_related_products
+        - field_related_assemblies
+      parent_name: group_tabs
+      weight: 28
+      label: Related
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_acc:
+      children:
+        - field_related_accessories
+      parent_name: group_tabs
+      weight: 31
+      label: Accessories
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_class:
+      children:
+        - field_products
+        - field_asse
+        - field_applications
+      parent_name: group_tabs
+      weight: 32
+      label: Classification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_similar:
+      children:
+        - field_similar_products
+      parent_name: group_tabs
+      weight: 29
+      label: 'Similar products'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_re:
+      children:
+        - field_related_applications
+      parent_name: group_tabs
+      weight: 30
+      label: 'Related applications'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+id: node.water_meters.default
+targetEntityType: node
+bundle: water_meters
+mode: default
+content:
+  field_applications:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_asse:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_description:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_documentation:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_download:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_image_fiedler:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+  field_nominal_flow_rate:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_overview:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_products:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_rank:
+    weight: 33
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_related_accessories:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_applications:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_assemblies:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_products:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_similar_products:
+    weight: 31
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_specification:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_teaser:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_type:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

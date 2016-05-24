@@ -1,0 +1,380 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.level_meters.field_applications
+    - field.field.node.level_meters.field_asse
+    - field.field.node.level_meters.field_deadband
+    - field.field.node.level_meters.field_deadband_m_
+    - field.field.node.level_meters.field_description
+    - field.field.node.level_meters.field_documentation
+    - field.field.node.level_meters.field_download
+    - field.field.node.level_meters.field_image_fiedler
+    - field.field.node.level_meters.field_measurement_method
+    - field.field.node.level_meters.field_measurement_range
+    - field.field.node.level_meters.field_overview
+    - field.field.node.level_meters.field_products
+    - field.field.node.level_meters.field_rank
+    - field.field.node.level_meters.field_related_accessories
+    - field.field.node.level_meters.field_related_applications
+    - field.field.node.level_meters.field_related_assemblies
+    - field.field.node.level_meters.field_related_products
+    - field.field.node.level_meters.field_similar_products
+    - field.field.node.level_meters.field_specification
+    - field.field.node.level_meters.field_teaser
+    - image.style.mid
+    - node.type.level_meters
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_description
+        - group_specification
+        - group_parameters
+        - group_documentation
+        - group_similar
+        - group_products
+        - group_application
+        - group_re
+        - group_class
+      parent_name: ''
+      weight: 3
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_description:
+      children:
+        - field_description
+      parent_name: group_tabs
+      weight: 120
+      label: Description
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_specification:
+      children:
+        - field_specification
+      parent_name: group_tabs
+      weight: 121
+      label: Specification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_parameters:
+      children:
+        - field_measurement_method
+        - field_measurement_range
+        - field_deadband
+        - group_min
+      parent_name: group_tabs
+      weight: 122
+      label: Parameters
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_documentation:
+      children:
+        - field_download
+        - field_documentation
+      parent_name: group_tabs
+      weight: 123
+      label: Documentation
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_application:
+      children:
+        - field_related_accessories
+      parent_name: group_tabs
+      weight: 126
+      label: Accessories
+      format_type: tab
+      format_settings:
+        label: Accessories
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+    group_products:
+      children:
+        - field_related_products
+        - field_related_assemblies
+      parent_name: group_tabs
+      weight: 125
+      label: 'Related '
+      format_type: tab
+      format_settings:
+        label: 'Related '
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+    group_min:
+      children:
+        - field_deadband_m_
+      parent_name: group_parameters
+      weight: 16
+      label: 'Minimal deadband (m)'
+      format_type: html_element
+      format_settings:
+        label: 'Minimal deadband (m)'
+        element: div
+        show_label: true
+        label_element: b
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: ''
+    group_class:
+      children:
+        - field_products
+        - field_asse
+        - field_applications
+      parent_name: group_tabs
+      weight: 128
+      label: Classification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_similar:
+      children:
+        - field_similar_products
+      parent_name: group_tabs
+      weight: 124
+      label: 'Similar products'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_re:
+      children:
+        - field_related_applications
+      parent_name: group_tabs
+      weight: 127
+      label: 'Related applications'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+  ds:
+    layout:
+      id: booststrap-6-6-bricks
+      path: modules/bootstrap_layouts/templates/bricks/bootstrap-6-6-bricks
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      top:
+        - links
+      upper_left:
+        - field_overview
+      upper_right:
+        - field_image_fiedler
+      middle:
+        - group_tabs
+        - field_specification
+        - field_download
+        - field_documentation
+        - field_similar_products
+        - field_related_products
+        - field_related_assemblies
+        - field_related_applications
+        - field_measurement_method
+        - field_description
+        - field_measurement_range
+        - field_deadband
+        - group_min
+        - field_deadband_m_
+        - group_description
+        - group_specification
+        - group_parameters
+        - group_documentation
+        - group_similar
+        - group_products
+        - group_application
+        - group_re
+        - field_related_accessories
+        - group_class
+        - field_products
+        - field_asse
+        - field_applications
+id: node.level_meters.default
+targetEntityType: node
+bundle: level_meters
+mode: default
+content:
+  field_applications:
+    weight: 130
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_asse:
+    weight: 129
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_deadband:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_deadband_m_:
+    weight: 17
+    label: hidden
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_description:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_documentation:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_download:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_image_fiedler:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: mid
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+  field_measurement_method:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_measurement_range:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_overview:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_products:
+    weight: 128
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_rank:
+    weight: 131
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_related_accessories:
+    weight: 128
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_applications:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_assemblies:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_products:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_similar_products:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_specification:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_teaser:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

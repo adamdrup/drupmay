@@ -1,0 +1,329 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.wind_meters.field_applications
+    - field.field.node.wind_meters.field_description
+    - field.field.node.wind_meters.field_documentation
+    - field.field.node.wind_meters.field_download
+    - field.field.node.wind_meters.field_image_fiedler
+    - field.field.node.wind_meters.field_measurement_range_wind
+    - field.field.node.wind_meters.field_overview
+    - field.field.node.wind_meters.field_products
+    - field.field.node.wind_meters.field_rank
+    - field.field.node.wind_meters.field_related_accessories
+    - field.field.node.wind_meters.field_related_applications
+    - field.field.node.wind_meters.field_related_assemblies
+    - field.field.node.wind_meters.field_related_products
+    - field.field.node.wind_meters.field_similar_products
+    - field.field.node.wind_meters.field_specification
+    - field.field.node.wind_meters.field_teaser
+    - field.field.node.wind_meters.field_ultrasonic
+    - node.type.wind_meters
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-6-6-bricks
+      path: modules/bootstrap_layouts/templates/bricks/bootstrap-6-6-bricks
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      top:
+        - links
+      upper_left:
+        - field_image_fiedler
+      middle:
+        - field_documentation
+        - field_download
+        - group_tabs
+        - field_products
+        - field_applications
+        - field_specification
+        - group_description
+        - group_specification
+        - group_parameters
+        - group_documents
+        - group_similar
+        - field_description
+        - group_related
+        - group_relat
+        - group_acc
+        - field_related_accessories
+        - group_class
+        - field_similar_products
+        - field_related_products
+        - field_measurement_range_wind
+        - field_ultrasonic
+        - field_related_assemblies
+        - field_related_applications
+      upper_right:
+        - field_overview
+  field_group:
+    group_description:
+      children:
+        - field_description
+      parent_name: group_tabs
+      weight: 8
+      label: Description
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_specification:
+      children:
+        - field_specification
+      parent_name: group_tabs
+      weight: 9
+      label: Specification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_parameters:
+      children:
+        - field_measurement_range_wind
+        - field_ultrasonic
+      parent_name: group_tabs
+      weight: 10
+      label: Parameters
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_documents:
+      children:
+        - field_documentation
+        - field_download
+      parent_name: group_tabs
+      weight: 11
+      label: Documents
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_tabs:
+      children:
+        - group_description
+        - group_specification
+        - group_parameters
+        - group_documents
+        - group_similar
+        - group_related
+        - group_relat
+        - group_acc
+        - group_class
+      parent_name: ''
+      weight: 3
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_related:
+      children:
+        - field_related_products
+        - field_related_assemblies
+      parent_name: group_tabs
+      weight: 13
+      label: 'Related products'
+      format_type: tab
+      format_settings:
+        label: 'Related products'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+    group_relat:
+      children:
+        - field_related_applications
+      parent_name: group_tabs
+      weight: 14
+      label: 'Related applications'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_similar:
+      children:
+        - field_similar_products
+      parent_name: group_tabs
+      weight: 12
+      label: 'Similar products'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_acc:
+      children:
+        - field_related_accessories
+      parent_name: group_tabs
+      weight: 15
+      label: Accessories
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_class:
+      children:
+        - field_products
+        - field_applications
+      parent_name: group_tabs
+      weight: 16
+      label: Classification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+id: node.wind_meters.default
+targetEntityType: node
+bundle: wind_meters
+mode: default
+content:
+  field_applications:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_description:
+    weight: 12
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_documentation:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_download:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_image_fiedler:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_measurement_range_wind:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_overview:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_products:
+    weight: 4
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_rank:
+    weight: 28
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_related_accessories:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_applications:
+    weight: 27
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_assemblies:
+    weight: 26
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_products:
+    weight: 25
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_similar_products:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_specification:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_teaser:
+    weight: 13
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_ultrasonic:
+    weight: 26
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

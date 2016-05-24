@@ -1,0 +1,320 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.assembly.field_applications
+    - field.field.node.assembly.field_asse
+    - field.field.node.assembly.field_description
+    - field.field.node.assembly.field_documentation
+    - field.field.node.assembly.field_download
+    - field.field.node.assembly.field_image_fiedler
+    - field.field.node.assembly.field_overview
+    - field.field.node.assembly.field_products
+    - field.field.node.assembly.field_rank
+    - field.field.node.assembly.field_related_accessories
+    - field.field.node.assembly.field_related_applications
+    - field.field.node.assembly.field_related_assemblies
+    - field.field.node.assembly.field_related_products
+    - field.field.node.assembly.field_similar_products
+    - field.field.node.assembly.field_specification
+    - field.field.node.assembly.field_teaser
+    - image.style.mid
+    - node.type.assembly
+  module:
+    - ds
+    - field_group
+    - file
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-6-6-bricks
+      path: modules/bootstrap_layouts/templates/bricks/bootstrap-6-6-bricks
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      top:
+        - links
+      upper_left:
+        - field_overview
+      upper_right:
+        - field_image_fiedler
+      middle:
+        - field_description
+        - group_tabs
+        - field_specification
+        - field_related_assemblies
+        - field_related_products
+        - field_documentation
+        - field_related_applications
+        - field_download
+        - group_description
+        - group_parameters
+        - group_specification
+        - group_documents
+        - group_related
+        - group_similar
+        - group_re
+        - group_class
+        - group_acc
+        - field_similar_products
+        - field_products
+        - field_asse
+        - field_related_accessories
+        - field_applications
+  field_group:
+    group_tabs:
+      children:
+        - group_description
+        - group_parameters
+        - group_specification
+        - group_documents
+        - group_related
+        - group_similar
+        - group_re
+        - group_class
+        - group_acc
+      parent_name: ''
+      weight: 3
+      label: Tabs
+      format_type: tabs
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+    group_documents:
+      children:
+        - field_documentation
+        - field_download
+      parent_name: group_tabs
+      weight: 125
+      label: Documents
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_description:
+      children:
+        - field_description
+      parent_name: group_tabs
+      weight: 122
+      label: Description
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_parameters:
+      children: {  }
+      parent_name: group_tabs
+      weight: 123
+      label: Parameters
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_specification:
+      children:
+        - field_specification
+      parent_name: group_tabs
+      weight: 124
+      label: Specification
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_related:
+      children:
+        - field_related_assemblies
+        - field_related_products
+      parent_name: group_tabs
+      weight: 126
+      label: 'Related products'
+      format_type: tab
+      format_settings:
+        label: 'Related products'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+    group_class:
+      children:
+        - field_products
+        - field_asse
+        - field_applications
+      parent_name: group_tabs
+      weight: 129
+      label: Classification
+      format_type: tab
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        formatter: closed
+    group_re:
+      children:
+        - field_related_applications
+      parent_name: group_tabs
+      weight: 128
+      label: 'Related applications'
+      format_type: tab
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        formatter: closed
+    group_similar:
+      children:
+        - field_similar_products
+      parent_name: group_tabs
+      weight: 127
+      label: 'Similar products'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+    group_acc:
+      children:
+        - field_related_accessories
+      parent_name: group_tabs
+      weight: 130
+      label: Accessories
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+id: node.assembly.default
+targetEntityType: node
+bundle: assembly
+mode: default
+content:
+  field_applications:
+    weight: 135
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_asse:
+    weight: 134
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_documentation:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_download:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_image_fiedler:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: mid
+      image_link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: image
+  field_overview:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_products:
+    weight: 133
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_rank:
+    weight: 136
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_related_accessories:
+    weight: 134
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_applications:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_assemblies:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_products:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_similar_products:
+    weight: 131
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_specification:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_teaser:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

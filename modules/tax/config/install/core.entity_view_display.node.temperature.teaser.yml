@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.temperature.body
+    - field.field.node.temperature.field_applications
+    - field.field.node.temperature.field_asse
+    - field.field.node.temperature.field_documentation
+    - field.field.node.temperature.field_download
+    - field.field.node.temperature.field_image_fiedler
+    - field.field.node.temperature.field_products
+    - field.field.node.temperature.field_rank
+    - field.field.node.temperature.field_related_accessories
+    - field.field.node.temperature.field_related_applications
+    - field.field.node.temperature.field_related_assemblies
+    - field.field.node.temperature.field_related_products
+    - field.field.node.temperature.field_similar_products
+    - node.type.temperature
+  module:
+    - text
+    - user
+id: node.temperature.teaser
+targetEntityType: node
+bundle: temperature
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_applications: true
+  field_asse: true
+  field_documentation: true
+  field_download: true
+  field_image_fiedler: true
+  field_products: true
+  field_rank: true
+  field_related_accessories: true
+  field_related_applications: true
+  field_related_assemblies: true
+  field_related_products: true
+  field_similar_products: true
+  langcode: true

@@ -1,0 +1,204 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.grids_app.body
+    - field.field.node.grids_app.field_applications
+    - field.field.node.grids_app.field_assem
+    - field.field.node.grids_app.field_en_partners
+    - field.field.node.grids_app.field_gallery
+    - field.field.node.grids_app.field_group
+    - field.field.node.grids_app.field_image_fiedler
+    - field.field.node.grids_app.field_link
+    - field.field.node.grids_app.field_link_name
+    - field.field.node.grids_app.field_partners
+    - field.field.node.grids_app.field_products
+    - field.field.node.grids_app.field_rank
+    - image.style.thumbnail
+    - node.type.grids_app
+  module:
+    - field_group
+    - image
+    - link
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_par:
+      children:
+        - field_partners
+        - field_en_partners
+        - field_group
+      parent_name: ''
+      weight: 9
+      label: Partners
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_sort:
+      children:
+        - field_rank
+      parent_name: ''
+      weight: 11
+      label: Sorting
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_link:
+      children:
+        - field_link
+        - field_link_name
+        - field_products
+        - field_applications
+      parent_name: ''
+      weight: 8
+      label: Links
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+    group_asse:
+      children:
+        - field_assem
+      parent_name: ''
+      weight: 10
+      label: Assembly
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+id: node.grids_app.default
+targetEntityType: node
+bundle: grids_app
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  field_applications:
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_assem:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_en_partners:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_gallery:
+    weight: 26
+    settings:
+      display_label: false
+    third_party_settings: {  }
+    type: boolean_checkbox
+  field_group:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_image_fiedler:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_link_name:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_partners:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_products:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_rank:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

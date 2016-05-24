@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.applications
+  module:
+    - system
+  theme:
+    - zircon
+id: applications_3
+theme: zircon
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'system_menu_block:applications'
+settings:
+  id: 'system_menu_block:applications'
+  label: Applications
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/applications\r\n/about\r\n/contact\r\n/history\r\n/references\r\n/people\r\n/online\r\n/user/*\r\n/partners\r\n/customers\r\n/sponsorship\r\n/documentation\r\n/price_list\r\n/most\r\n<front>\r\n/map\r\n/search\r\n/search/*\r\n/gallery"
+    negate: true
+    context_mapping: {  }

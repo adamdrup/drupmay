@@ -1,0 +1,188 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.application.field_applications
+    - field.field.node.application.field_description
+    - field.field.node.application.field_documentation
+    - field.field.node.application.field_download
+    - field.field.node.application.field_image_fiedler
+    - field.field.node.application.field_related_applications
+    - field.field.node.application.field_related_products
+    - field.field.node.application.field_teaser
+    - node.type.application
+  module:
+    - colorbox
+    - ds
+    - field_group
+    - file
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-6-6-bricks
+      path: modules/bootstrap_layouts/templates/bricks/bootstrap-6-6-bricks
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      top:
+        - links
+      upper_left:
+        - field_image_fiedler
+      upper_right:
+        - field_teaser
+      middle:
+        - group_box
+        - field_description
+        - field_documentation
+        - group_description
+        - field_download
+        - group_documents
+        - field_applications
+        - group_related
+        - field_related_applications
+        - group_rel
+        - field_related_products
+  field_group:
+    group_description:
+      children:
+        - field_description
+      parent_name: group_box
+      weight: 4
+      label: Description
+      format_type: tab
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+    group_documents:
+      children:
+        - field_documentation
+        - field_download
+      parent_name: group_box
+      weight: 5
+      label: Documents
+      format_type: tab
+      format_settings:
+        direction: vertical
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+    group_related:
+      children:
+        - field_related_products
+      parent_name: group_box
+      weight: 6
+      label: 'Related products'
+      format_type: tab
+      format_settings:
+        label: 'Related products'
+        formatter: closed
+        description: ''
+        id: ''
+        classes: ''
+    group_box:
+      children:
+        - group_description
+        - group_documents
+        - group_related
+        - group_rel
+      parent_name: ''
+      weight: 3
+      label: Box
+      format_type: tabs
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+        direction: vertical
+    group_rel:
+      children:
+        - field_applications
+        - field_related_applications
+      parent_name: group_box
+      weight: 7
+      label: 'Related applications'
+      format_type: tab
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        id: ''
+id: node.application.default
+targetEntityType: node
+bundle: application
+mode: default
+content:
+  field_applications:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_documentation:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_download:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_image_fiedler:
+    weight: 1
+    label: hidden
+    settings:
+      colorbox_node_style: medium
+      colorbox_node_style_first: medium
+      colorbox_image_style: medium
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: colorbox
+  field_related_applications:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_related_products:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_teaser:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

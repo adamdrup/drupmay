@@ -1,0 +1,4 @@
+excluded:
+  - block.block.views_block__address_block_1
+  - block.block.views_block__contact_us_block_1
+required: true

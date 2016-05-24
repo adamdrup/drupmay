@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+    - taxonomy.vocabulary.assemblies
+id: assemblies
+label: Assemblies
+vocabulary: assemblies
+menu: main

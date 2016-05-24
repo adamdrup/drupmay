@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Assemblies
+vid: assemblies
+description: ''
+hierarchy: 0
+weight: 0

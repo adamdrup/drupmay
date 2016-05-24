@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.assembliemenu
+  module:
+    - system
+  theme:
+    - zircon
+id: assemblies
+theme: zircon
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'system_menu_block:assembliemenu'
+settings:
+  id: 'system_menu_block:assembliemenu'
+  label: Assemblies
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stations\r\n/clean\r\n/industry\r\n/meteo\r\n/waste\r\n/data"
+    negate: false
+    context_mapping: {  }

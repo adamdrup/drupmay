@@ -1,0 +1,173 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.level_meters.field_applications
+    - field.field.node.level_meters.field_asse
+    - field.field.node.level_meters.field_deadband
+    - field.field.node.level_meters.field_deadband_m_
+    - field.field.node.level_meters.field_description
+    - field.field.node.level_meters.field_documentation
+    - field.field.node.level_meters.field_download
+    - field.field.node.level_meters.field_image_fiedler
+    - field.field.node.level_meters.field_measurement_method
+    - field.field.node.level_meters.field_measurement_range
+    - field.field.node.level_meters.field_overview
+    - field.field.node.level_meters.field_products
+    - field.field.node.level_meters.field_rank
+    - field.field.node.level_meters.field_related_accessories
+    - field.field.node.level_meters.field_related_applications
+    - field.field.node.level_meters.field_related_assemblies
+    - field.field.node.level_meters.field_related_products
+    - field.field.node.level_meters.field_similar_products
+    - field.field.node.level_meters.field_specification
+    - field.field.node.level_meters.field_teaser
+    - image.style.medium
+    - node.type.level_meters
+  module:
+    - ds
+    - file
+    - image
+    - options
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: booststrap-3-9
+      path: modules/bootstrap_layouts/templates/two-columns/bootstrap-3-9
+      library: ''
+      disable_css: false
+      settings: {  }
+    regions:
+      sidebar_right:
+        - node_title
+        - field_teaser
+        - links
+      sidebar_left:
+        - field_image_fiedler
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.level_meters.teaser
+targetEntityType: node
+bundle: level_meters
+mode: teaser
+content:
+  field_deadband:
+    type: list_default
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_deadband_m_:
+    type: number_unformatted
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_default
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_documentation:
+    type: file_rss_enclosure
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_download:
+    type: file_rss_enclosure
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_image_fiedler:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_measurement_method:
+    type: list_default
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_measurement_range:
+    type: list_default
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_overview:
+    type: text_default
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_products:
+    type: entity_reference_label
+    weight: 19
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_applications:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_assemblies:
+    type: entity_reference_label
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_related_products:
+    type: entity_reference_label
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_specification:
+    type: text_default
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_teaser:
+    type: text_default
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_applications: true
+  field_asse: true
+  field_rank: true
+  field_related_accessories: true
+  field_similar_products: true
+  langcode: true
